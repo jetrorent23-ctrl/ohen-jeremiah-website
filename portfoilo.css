@@ -1,0 +1,294 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #121212; 
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-image: url('media/download (8).jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    background-attachment: fixed;
+    
+}
+
+.main-header {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), #121212), url('https://unsplash.com') center/cover;
+    border-bottom: 3px solid #ff0000; 
+    margin-bottom: 30px;
+}
+
+.main-header h1 {
+    font-size: 2.5rem;
+    color: #ff0000; 
+    text-transform: uppercase;
+}
+
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.box {
+    background-color: #1c1c1c; 
+    border: 2px solid #ff0000; 
+    border-radius: 8px; 
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.1); 
+}
+
+
+.profile-box {
+    text-align: center;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; 
+    border: 3px solid #ff0000;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: #ff0000;
+    font-weight: bold;
+}
+
+
+.project-card {
+    background-color: #2a2a2a;
+    padding: 15px;
+    margin-top: 15px;
+    border-left: 5px solid #ff0000; 
+    border-radius: 4px;
+}
+
+
+.nav-box {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.nav-link {
+    display: inline-block;
+    background-color: #ff0000;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 25px;
+    margin: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #ffffff;
+    color: #ff0000;
+    border: 1px solid #ff0000;
+}
+@media (max-width: 768px) {
+    body {
+        padding: 16px; /* Shrinks the huge desktop padding down for tiny screens */
+    }
+
+    .main-header {
+        margin-bottom: 25px;
+    }
+
+    .main-header h1 {
+        font-size: 2.2rem; /* Reduces the large 3rem font so it doesn't wrap awkwardly */
+    }
+
+    .main-header p {
+        font-size: 1rem;
+    }
+
+    .container {
+        padding: 25px 20px; /* Gives more content room inside the card on phones */
+        gap: 30px;
+    }
+
+    .profile-box {
+        gap: 15px;
+    }
+
+    .profile-img {
+        width: 130px; /* Scales down profile image slightly to look proportional */
+        height: 130px;
+    }
+
+    /* Seamless touch tap feedback replaces desktop mouse-hover mechanics */
+    .profile-img:active {
+        transform: scale(1.03);
+    }
+
+    .profile-box h2 {
+        font-size: 1.6rem;
+    }
+
+    .profile-box p {
+        font-size: 0.95rem;
+    }
+
+    /* Stacks the horizontal links vertically so they fit screens elegantly */
+    .nav-box {
+        flex-direction: column; 
+        gap: 10px;
+        padding-top: 20px;
+    }
+
+    .nav-link {
+        display: block;
+        text-align: center;
+        padding: 14px 20px; /* Expands click target zone for comfortable thumb tapping */
+    }
+
+    /* High-response visual tap state for phone screen touches */
+    .nav-link:active {
+        background-color: black;
+        color: red;
+    }
+}
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.skill-badge {
+    background-color: black;
+    color: red;
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 12px 6px;
+    text-align: center;
+    border-radius: 8px;
+    border: 1px solid #d4ebf9;
+    transition: all 0.25s ease;
+}
+
+.skill-badge:hover {
+    background-color: red;
+    color: black;
+    transform: translateY(-2px);
+}
+
+.projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.project-item {
+    background-color: black;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.project-item:hover {
+    transform: translateX(5px);
+    border-color: red;
+}
+
+.project-item h4 {
+    color: red;
+    font-size: 1.2rem;
+    margin-bottom: 6px;
+}
+
+.project-item p {
+    font-size: 0.98rem;
+    line-height: 1.6;
+    color: red;
+}
+
+.quick-contact-box {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.quick-contact-box p {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #ff0000;
+}
+
+/* Wide Laptop Horizontal Navigation Row Layout */
+.nav-box {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    border-top: 2px solid black;
+    padding-top: 35px;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-weight: 700;
+    color: red;
+    padding: 14px 24px;
+    border: 2px solid red;
+    border-radius: 10px;
+    background-color: transparent;
+    transition: all 0.25s ease;
+}
+
+.nav-link:hover {
+    background-color: red;
+    color: black;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(52, 152, 219, 0.2);
+}
+
+/* ==========================================================================
+   2. Mobile View Optimization Rules (Screens 768px and smaller)
+   ========================================================================== */
+@media (max-width: 768px) {
+    body {
+        padding: 20px 15px; /* Contracts body border gap sizes to fit small screens */
+    }
+
+    .main-header {
+        margin-bottom: 25px;
+    }
+
+    .main-header h1 {
+        font-size: 2.3rem;
+    }
+
+    .main-header p {
+        font-size: 1.05rem;
+    }
+
+    .container {
+        padding: 30px 20px;
+        gap: 30px;
+    }
+
+    .nav-link {
+        display: block;
+        text-align: center;
+        padding: 14px 20px; /* Scales tap size zones up perfectly for touch screen finger control */
+    }
+
+    .nav-link:active {
+        background-color: #3498db;
+        color: #ffffff;
+    }
+}

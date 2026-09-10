@@ -1,0 +1,285 @@
+/* ==========================================================================
+   1. Global Alignment Setup (Matches Desktop Framework Wide Formats)
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    background-image: url('background.jpg'); /* Links to your universal folder background asset file */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #f4f7f6;
+    color: #2c3e50;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 40px;
+    background-image: url('media/download (8).jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    background-attachment: fixed;
+}
+
+.main-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.main-header h1 {
+    font-size: 3.5rem;
+    color: red;
+    margin-bottom: 10px;
+    letter-spacing: -1px;
+}
+
+.main-header p {
+    font-size: 1.3rem;
+    color: red;
+}
+
+/* Master Structural Box Window */
+.container {
+    max-width: 850px;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    border-radius: 20px;
+    box-shadow: 0 20px 45px rgb(255, 2, 2);
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.contact-intro {
+    text-align: center;
+    color: red;
+}
+
+.contact-intro h2 {
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+}
+
+.highlight {
+    color: red;
+}
+
+.contact-intro p {
+    font-size: 1.1rem;
+    color: red;
+    line-height: 1.6;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   2. Desktop Form and Sidebar Grid Split Configurations
+   ========================================================================== */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.8fr; /* Balanced sidebar and wide inputs design layout */
+    gap: 40px;
+}
+
+.info-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-card {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.info-card h3 {
+    font-size: 1.1rem;
+    color: #2c3e50;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.sidebar-link {
+    color: red;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.05rem;
+    transition: color 0.2s ease;
+}
+
+.sidebar-link:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+/* Inputs fields control wrappers layout rules */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-weight: 700;
+    color: red;
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #cbd5e1;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: #2c3e50;
+    background-color: #ffffff;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Input Fields Selection Interaction Glow Mechanics */
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: red;
+    box-shadow: 0 0 0 4px rgba(52, 152, 219, 0.15);
+}
+
+.btn-submit {
+    background-color: red;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 16px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background-color: #ff0000;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(44, 62, 80, 0.2);
+}
+
+/* ==========================================================================
+   3. Uniform Footer Actions Panel Layout Map Arrays
+   ========================================================================== */
+.nav-box {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    border-top: 2px solid #ecf0f1;
+    padding-top: 35px;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-weight: 700;
+    color: red;
+    padding: 14px 24px;
+    border: 2px solid red;
+    border-radius: 10px;
+    background-color: transparent;
+    transition: all 0.25s ease;
+}
+
+.nav-link:hover {
+    background-color: red;
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(255, 0, 0, 0.942);
+}
+
+.nav-link.active {
+    background-color: red;
+    color: #ffffff;
+}
+
+/* ==========================================================================
+   4. Mobile Phone Responsive Strategy (Activates below 768px viewports)
+   ========================================================================== */
+@media (max-width: 768px) {
+    body {
+        padding: 20px 15px;
+    }
+
+    .main-header {
+        margin-bottom: 25px;
+    }
+
+    .main-header h1 {
+        font-size: 2.3rem;
+    }
+
+    .main-header p {
+        font-size: 1.05rem;
+    }
+
+    .container {
+        padding: 30px 20px;
+        gap: 30px;
+    }
+
+    .contact-intro h2 {
+        font-size: 1.7rem;
+    }
+
+    .contact-intro p {
+        font-size: 0.98rem;
+    }
+
+    /* Collapses split sidebar layouts into streamlined vertical stack arrays */
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .info-sidebar {
+        order: 2; /* Moves text communication lines right beneath inputs fields for natural flow */
+    }
+
+    .btn-submit {
+        padding: 14px;
+        font-size: 1rem;
+    }
+
+    /* Converts menu paths elements directly to long down vertical stacks */
+    .nav-box {
+        flex-direction: column;
+        gap: 12px;
+        padding-top: 25px;
+    }
+
+    .nav-link {
+        display: block;
+        text-align: center;
+        padding: 14px 20px;
+    }
+
+    .nav-link:active {
+        background-color: red;
+        color: #ffffff;
+    }
+}
